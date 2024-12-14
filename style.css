@@ -1,0 +1,51 @@
+#unique-div #unique-title{ /* Este posee mas especificidad  */
+    color: crimson;
+    }
+     div h1{
+        color: cornflowerblue; /* A diferencia de este */
+     } 
+    
+     /* ------------------------------------- */
+       /* A pesar de tener la misma especificidad que el anterior, este estilo predominara por la regla de "Cascada" */
+       /* Si quitamos el "div" se aplicara el estilo anterior, ya que ese tendra mas especificidad */
+       
+     
+     h1{ 
+        color: greenyellow;
+     }
+     .my-title{
+        color: violet;
+     }
+     .card-padre{ /* Elemento padre que contiene los cards */
+        border: 5px solid crimson;
+        background-color: blanchedalmond;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+        color: white;
+    } 
+    .card-hijo-1{ /* Aqui heredamos difertentes caracteristicas del elemnto padre por ejemplo: las letras de color blanco. */
+        /* Tambien por la especificidad del codigo del H1 el titulo "Herencia" aparece en azul */
+        background-color: black;
+        width: 15rem;
+        padding: 2rem 3rem;
+        height: auto;
+        margin: 2.5rem;
+        border-radius: 25px;
+        box-sizing: border-box;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-hijo2-img{ /* Elemento "padre" que contiene la imagen */
+        width: 50%;
+        padding: 0;
+        border-radius: 20px;
+    }
+    .card-hijo2-img img{ /* Hereda las acaracteristicas  que le hayamos puesto al elemnto "padre"
+        En este caso*/
+        width: 100%;
+    }
